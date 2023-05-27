@@ -1,0 +1,25 @@
+[package]
+name = "scm-cli"
+version = "0.1.0"
+edition = "2021"
+repository = "https://github.com/valeralabs/scm"
+description = "An ergonomic ScyllaDB migration manager"
+license = "MIT"
+authors = ["Azz <azz@valera.co>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = "0.4.24"
+clap = { version = "4.3.0", features = ["derive"] }
+human-panic = "1.1.4"
+indicatif = { version = "0.17.3", features = ["tokio"] }
+scylla = { version = "0.8.1", features = ["ssl"] }
+serde = { version = "1.0.163", features = ["derive"] }
+tokio = { version = "1.28.1", features = ["full"] }
+toml = "0.7.4"
+colored = "2"
+
+[[bin]]
+name = "scm"
+path = "src/main.rs"
